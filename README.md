@@ -94,3 +94,73 @@ mongo "mongodb+srv://inssacs.rekt9.mongodb.net/<dbname>" --username <username>
 | Generación | Indicador de trama(1) | Tiempo de respuesta(2) | Fecha(12) | Serial de tarjeta(10) | Ejemplo |
 | --- | --- | --- | --- | --- | --- |
 | **5ta** | n | 00 | 111220124618 | 4512002120 | n001112201246184512002120  |
+
+## Trama Z Peticiòn de credito
+
+| Generación | Indicador de trama(1) | ID de usuario(6) | Tiempo de respuesta(2) | Serial dispensadora(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- |
+| **3ra** | Z | 001601 | 01 | 0211234567 | Z001601010211234567 |
+
+| Generación | Indicador de trama(1) | ID de usuario(6+) | ID operacion(24) | Tiempo de respuesta(2) | Fecha(12) | Serial de tarjeta(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **5ta** | Z | 54781274 | 5f4e54c0de54b3b2b359826a | 00 | 111220124618 | 4512002120 | Z547812745f4e54c0de54b3b2b359826a001112201246184512002120  |
+
+## Trama Y Venta cashless
+
+| Generación | Indicador de trama(1) | ID de usuario(6) | Selección(2) | Precio(7) | Fecha(12) | Tiempo de respuesta(2) | Serial dispensadora(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **3ra** | Y | 001601 | 33 | 0000500 | 011216243030 | 00 | 0211234567 | Y001601330000500011216243030000211234567 |
+
+| Generación | Indicador de trama(1) | ID de usuario(id huella - cod de barras)(6 o mas) | Selección(3) | Valor de la selección(7) | ID operación(24) | Tiempo Respuesta(2) | Fecha(ddmmaahhmmss)(12) | Serial de tarjeta(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **5ta** | Y | 100601 ó 54781274  | 028 | 0002000 | 5f4e54c0de54b3b2b359826a | 99 | 061120162146  | 5112011060 | Y5478127402800020005f4e54c0de54b3b2b359826a990611201621465112011060 |
+
+## Trama V Recarga cashless
+
+| Generación | Indicador de trama(1) | ID de usuario(6) | Valor(7) | Fecha(12) | Tiempo de respuesta(2) | Serial dispensadora(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **3ra** | V | 001601 | 0000500 | 011216243030 | 00 | 0211234567 | V0016010000500011216243030000211234567 |
+
+| Generación | Indicador de trama(1) | ID de usuario(6+) | Valor(7) | ID operacion(24) | Tiempo de respuesta(2) | Fecha(12) | Serial de tarjeta(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **5ta** | V | 54781274 | 0000500 | 5f4e54c0de54b3b2b359826a | 00 | 011216243030 | 4512002120 | V5478127400005005f4e54c0de54b3b2b359826a000112162430304512002120  |
+
+## Trama W Venta fallida cashless
+
+| Generación | Indicador de trama(1) | ID de usuario(6) | Selección(2) | Tiempo de respuesta(2) | Serial dispensadora(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- |
+| **3ra** | W | 001601 | 33 | 00 | 0211234567 | W00160133000211234567 |
+
+| Generación | Indicador de trama(1) | ID de usuario(6+) | Selección(3) | ID operacion(24) | Tiempo de respuesta(2) | Fecha(12) | Serial de tarjeta(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **5ta** | W | 54781274 | 033 | 5f4e54c0de54b3b2b359826a | 00 | 011216243030 | 4512002120 | W547812740335f4e54c0de54b3b2b359826a000112162430304512002120  |
+
+## Trama A Aprobación selección
+
+| Generación | Indicador de trama(1) | ID de usuario(6) | Selección(2) | Tiempo de respuesta(2) | Serial dispensadora(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- |
+| **3ra** | A | 001601 | 33 | 00 | 0211234567 | A00160133000211234567 |
+
+| Generación | Indicador de trama(1) | ID de usuario(6+) | Selección(3) | ID operacion(24) | Tiempo de respuesta(2) | Fecha(12) | Serial de tarjeta(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **5ta** | A | 54781274 | 033 | 5f4e54c0de54b3b2b359826a | 00 | 011216243030 | 4512002120 | A547812740335f4e54c0de54b3b2b359826a000112162430304512002120 |
+
+## Trama C entrega fallida
+
+| Generación | Indicador de trama(1) | ID de usuario(6) | # Selección(2) | Fecha(ddmmaahhmmss)(12) | Estado de SD(1) | Tiempo de respuesta(2) | Serial Dispensadora(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **3ra** | C | 001601 | 33 | 120418131423 | 1 | 00 | 0211234567 | C001601331204181314231000211234567 |
+
+| Generación | Indicador de trama(1) | ID de usuario(id huella - cod de barras)(6 o mas) | # Selección(3) | ID operación(24) | Tiempo Respuesta(2) | Fecha(ddmmaahhmmss)(12) | Serial de tarjeta(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **5ta** | C | 100601 ó 54781274 | 011 | 5f4e54c0de54b3b2b359826a | 99 | 061120162146 | 5112011060 | C547812740115f4e54c0de54b3b2b359826a990611201621465112011060 |
+
+## Trama B Entrega exitosa
+
+| Generación | Indicador de trama(1) | ID de usuario(6) | # Selección(3) | Fecha(ddmmaahhmmss)(12) | Estado de SD(1) | Tiempo de respuesta(2) | Serial Dispensadora(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **3ra** | B | 001601 | 46 | 120418131423 | 1 | 01 | 0211234567 | B001601461204181314231010211234567 |
+
+| Generación | Indicador de trama(1) | ID de usuario(id huella - cod de barras)(6 o mas) | # Selección(3) | ID operación(24) | Tiempo Respuesta(2) | Fecha(ddmmaahhmmss)(12) | Serial de tarjeta(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **5ta** | B | 100601 ó 54781274  | 011 | 5f4e54c0de54b3b2b359826a | 99 | 061120162146  | 5112011060 | B547812740115f4e54c0de54b3b2b359826a990611201621465112011060 |

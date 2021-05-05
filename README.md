@@ -1,4 +1,4 @@
-<img src="https://github.com/camiloadominguez/peliculas-backend/edit/master/logo.png" alt="logo_inssa.png">
+<img src="https://github.com/camiloadominguez/peliculas-backend/blob/master/logo.png" alt="logo_inssa.png">
 
 # Especificación tramas ICS
 

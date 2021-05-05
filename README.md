@@ -47,6 +47,10 @@ mongo "mongodb+srv://inssacs.rekt9.mongodb.net/<dbname>" --username <username>
 
 ## Trama T Alertas de billetero
 
-| Generación | Indicador de trama (1) | Estado del billetero (1) | Fecha (12) | Estado SD (1) | Tiempo de respuesta (2) | Serial dispensadora (10) |
+| Generación | Indicador de trama(1) | Estado del billetero(1) | Fecha(12) | Estado SD(1) | Tiempo de respuesta(2) | Serial dispensadora(10) | Ejemplo |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **3ra** | T | 1 | 011216243030 | 1 | 01 | 0211234567 | T10112162430301010211234567 |
+
+| Generación | Indicador de trama(1) | Estado del billetero(1) | Tiempo de respuesta (2) | Fecha (12) | Serial de tarjeta(10) | Ejemplo |
 | --- | --- | --- | --- | --- | --- | --- |
-| **3ra** | T | 1 | 011216243030 | 1 | 01 | 0211234567 |
+| **5ta** | T | 1 | 09 | 111220124618 | 4512002120 | T1091112201246184512002120 |

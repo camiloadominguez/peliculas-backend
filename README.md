@@ -9,11 +9,11 @@ https://www.raspberrypi.org/downloads/raspbian/
 
 2 Habilitar ssh en la raspberry 
 
-    ``sudo systemctl enable ssh``
+``sudo systemctl enable ssh``
 
 3 Instalar wvdial para permitir la ejecución de las rutinas del modem (Quectel EC25):  
 
-    ``$sudo apt-get install wvdial``
+``$sudo apt-get install wvdial``
 
   - Verificar que el hardware USB este correctamente instalado y conectado 
 
